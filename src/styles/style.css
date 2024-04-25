@@ -1,0 +1,19 @@
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-top: -15px;
+}
+.reaction {
+  margin-top: -10px;
+}
+.item-cateogry {
+  margin-top: -10px;
+  margin-left: 0px;
+}
+
+.item-cateogry button {
+  height: 30px;
+}
+.banner {
+  background-color: #f4f4f5;
+}
