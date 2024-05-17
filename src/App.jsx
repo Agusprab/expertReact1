@@ -6,8 +6,9 @@ import { Routes, Route } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import HomePage from './pages/HomePage';
 import { asyncPreloadProcess } from './states/isPreload/action';
-
-
+import DetailPage from './pages/DetailPage';
+import LeaderBoardPage from './pages/LeaderBoardPage';
+import Loading from './components/Loading';
 function App() {
   const authUser = useSelector((states) => states.authUser);
   const isPreload = useSelector((states) => states.isPreLoad);
@@ -22,7 +23,9 @@ function App() {
   if (authUser === null) {
     return (
       <> 
+      
         <main>
+        <Loading />
           <Routes>
             <Route path="/*" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
@@ -34,9 +37,13 @@ function App() {
 
   return (
     <>
+      
         <main>
+        <Loading />
           <Routes>
-            <Route path="/" element={<HomePage />} />        
+            <Route path="/" element={<HomePage />} />
+            <Route path="/thread/:id" element={<DetailPage />} /> 
+            <Route path="/leaderboard" element={<LeaderBoardPage />} />                    
           </Routes>
         </main>
     

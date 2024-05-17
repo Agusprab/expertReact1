@@ -8,13 +8,12 @@ import { Provider } from 'react-redux';
 import store from './states';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  
+  <StrictMode>
   <Provider store={store}>
-    <BrowserRouter>
-      <StrictMode>
+    <BrowserRouter>  
         <App />
-      </StrictMode>
     </BrowserRouter>
-  </Provider>,
+  </Provider>
+  </StrictMode>,
 
 )

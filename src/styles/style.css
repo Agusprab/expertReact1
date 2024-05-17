@@ -17,3 +17,18 @@
 .banner {
   background-color: #f4f4f5;
 }
+.thread-item {
+  cursor: pointer;
+}
+
+.thread-item > header,
+.item-cateogry,
+.reaction {
+  cursor: default;
+}
+
+.loading {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}

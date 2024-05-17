@@ -18,6 +18,18 @@ function postedAt(date) {
     }
     return 'just now';
   }
+
+  function ubahFormatTanggal(tanggalISO) {
+    const bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+    
+    const tanggal = new Date(tanggalISO);
+    const hari = tanggal.getDate();
+    const namaBulan = bulan[tanggal.getMonth()];
+    const tahun = tanggal.getFullYear();
+    
+    return `${hari} ${namaBulan} ${tahun}`;
+}
+
   
-  export { postedAt };
+  export { postedAt,ubahFormatTanggal };
   
