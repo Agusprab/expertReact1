@@ -33,7 +33,7 @@ function ThreadInput({addThread}){
       </div>
       <div className="modal-footer">
         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" className="btn btn-dark" onClick={handleSubmit} aria-label="Kirim" name="Kirim">Kirim</button>
+        <button type="submit" className="btn btn-dark" onClick={handleSubmit} >Kirim</button>
       </div>
       </form>
     </div>
